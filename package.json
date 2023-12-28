@@ -1,0 +1,20 @@
+{
+  "name": "teste-cypress-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run --browser chrome",
+    "cy:dash": "npx cypress run --record --key 013ee4dd-27da-4400-8ebb-fdb429324b7e"
+  },
+  "keywords": [],
+  "author": "Sarah Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "faker": "^5.5.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.3.1"
+  }
+}
