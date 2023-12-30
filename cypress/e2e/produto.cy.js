@@ -33,14 +33,17 @@ describe('Funcionalidade Página de produtos', () => {
             cy.get('#select2-billing_country-container').click().type('Brasil').click();
             cy.get('#billing_address_1').type(faker.address.streetAddress());
             cy.get('#billing_city').type(faker.address.city());
-            cy.get('#select2-billing_state-container').click().type('São Paulo').type('{enter}');
+            //cy.get('#select2-billing_state-container').click().type('São Paulo').type('{enter}');
+            cy.get('#billing_postcode').type('06499-999');
             //cy.get('#billing_postcode').type(faker.address.zipCode());
+            cy.get('#billing_phone').type('98306676');
             //cy.get('#billing_phone').type(faker.phone.phoneNumber());
-            //cy.get('#billing_email').type(faker.internet.email());
+            cy.get('#billing_email').type(faker.internet.email());
             //cy.get('#createaccount').click();
             cy.get('#payment_method_cod').click();
             cy.get('#terms').click();
-            // cy.get('#place_order').click();
+            cy.get('#place_order').click();
+            cy.get('.woocommerce-notice').should('contain','Obrigado. Seu pedido foi recebido.');
 
            
             
